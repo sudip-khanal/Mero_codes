@@ -4,10 +4,10 @@ include 'connect.php';
 if(isset($_POST['submit'])){
   $name =$_POST['name'];
   $email =$_POST['email'];
-  $mobile =$_POST['mobile'];
+  $mobile =$_POST['mobile_number'];
   $password =$_POST['password'];
   
-  $sql = "insert into `crud`(name,email,mobile,password) values('$name','$email','$mobile','$password')";
+  $sql = "insert into `crud`(name,email,mobile,password) values('$name','$email','$mobile_number','$password')";
   $result =mysqli_query($con,$sql);
   if($result){ 
     // echo "Data inserted successfully";
@@ -34,8 +34,8 @@ if(isset($_POST['submit'])){
       <label>Email</label><br>
       <input type="email" name="email" autocomplete="off"><br>
 
-      <label>Mobile</label><br>
-      <input type="number" name="mobile" autocomplete="off"><br>
+      <label>Mobile Number</label><br>
+      <input type="number" name="mobile_number" autocomplete="off"><br>
 
       <label>Password</label><br>
       <input type="password" name="password" autocomplete="off"><br><br>
